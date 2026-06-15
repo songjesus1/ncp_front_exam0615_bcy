@@ -8,7 +8,7 @@ WORKDIR /app
 #dependencies에 있는 라이브러리 설치
 COPY package*.json ./
 
-RUN install
+RUN npm install
 
 #현재 위치에 있는 파일들을 .app폴더로 복사
 #build 명령어로 React 정적 웹 파일 생성
