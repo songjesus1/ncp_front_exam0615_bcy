@@ -1,5 +1,5 @@
 # node 이미지 빌드
-FROM node:24=slim AS build
+FROM node:24-slim AS build
 
 #작업 디렉토리 생성 및 설정
 WORKDIR /app
