@@ -1,7 +1,12 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./App.css";
 
+//API_BASE_URL:통신할 백엔드 주소를 저장하는 변수
+//클라우드용
 const API_BASE_URL = "/api";
+
+//로컬 테스트용
+//const API_BASE_URL = "http://localhost:3000/api";
 
 function App() {
   const [diaries, setDiaries] = useState([]);
