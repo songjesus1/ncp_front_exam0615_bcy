@@ -10,6 +10,15 @@ server {
         try_files $uri /index.html;
     }
 
+    #로드밸런서 분산 확인용 경로 설정
+    location /frontend-info{
+        #응답형태를 JSON 형식으로 설정
+        default_type application/json;
+
+        #응답결과 설정
+        return 200 '{ "type":"frontend", "hostname":"${FRONTEND_NAME}" }';
+    }
+
     #Private 서버의 Node.js로 치환해서 보내는 경로
     #우분투의 환경변수를 접근하는 방법 : ${환경변수명}
     location /api/ {
